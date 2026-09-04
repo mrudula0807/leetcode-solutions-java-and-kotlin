@@ -1,17 +1,10 @@
 class Solution {
     fun separateDigits(nums: IntArray): IntArray {
         
-        val list = mutableListOf<Int>()
-
-        for(num in nums){
-
-            val digits = num.toString().map {
-                it.digitToInt()
+        return nums.flatMap {
+            it.toString().map { ch ->
+                ch.digitToInt()
             }
-
-            list.addAll(digits)
-        }
-
-        return list.toIntArray()
+        }.toIntArray()
     }
 }
