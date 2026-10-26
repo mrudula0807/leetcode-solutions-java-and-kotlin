@@ -1,0 +1,9 @@
+class Solution {
+    fun splitWordsBySeparator(words: List<String>, separator: Char): List<String> {
+        return words.flatMap {
+            it.split(separator)
+        }.filter {
+            it.isNotEmpty()
+        }
+    }
+}
