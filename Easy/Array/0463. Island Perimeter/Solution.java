@@ -13,16 +13,10 @@ class Solution {
                 perimeter += 4;
 
                 if(row > 0 && grid[row - 1][col] == 1){
-                    perimeter--;
+                    perimeter -= 2;
                 }
                 if(col > 0 && grid[row][col - 1] == 1){
-                    perimeter--;
-                }
-                if(row < grid.length - 1 && grid[row + 1][col] == 1){
-                    perimeter--;
-                }
-                if(col < grid[row].length - 1 && grid[row][col + 1] == 1){
-                    perimeter--;
+                    perimeter -= 2;
                 }
             }
         }
